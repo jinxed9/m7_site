@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .title-section {
+            padding: 50px 20px;
+        }
+        .title-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .title-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+		
+		
+		.video-section {
+			display: flex;
+			justify-content: center; /* Centers the video horizontally */
+			align-items: center; /* Centers the video vertically if needed */
+			width: 100%; /* Full width of the section */
+			padding: 20px; /* Optional: Adds padding around the section */
+		}
+
+		.video-section .video-container {
+			position: relative;
+			height: 800px;
+			width: 80%; /* Set the width to 70% of the screen width */
+			max-width: 800px; /* Ensures the video does not exceed 1000px */
+			padding-top: 10px; /* Aspect ratio for 1216:1310 videos */
+		}
+
+		.video-section .video-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%; /* Full width of the container */
+			height: 100%; /* Full height of the container */
+			border: none; /* Removes border for a cleaner look */
+		}
+
+
+
+
+		
+		
+		
+		
+
+
+		
+        .video-section, .three-video-section {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+		.video-section video {
+			max-width: 70%;
+			width: 70%;
+			height: auto;
+			margin: 10px;
+		}	
+		
+        .three-video-section {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .three-video-section h2 {
+            font-size: 2rem;
+            margin-bottom: 0px;
+			margin-top: 20px;
+        }
+		.three-video-section .videos-container {
+			flex-direction: column;
+			align-items: center;
+			width: 70%;
+		}
+
+		.three-video-section .videos-container video {
+			width: 70%;
+			max-width: 700px;
+		}
+		@media (max-width: 768px) {
+            .title-section h1 {
+                font-size: 2rem;
+            }
+            .three-video-section .videos-container video {
+                width: 100%;
+            }
+        }
+		
+		
+		.three-video-section ul {
+			list-style-type: disc;
+			padding-left: 20px;
+			text-align: left;
+			margin-bottom: 20px;
+			color: 'darkgray';
+		}
+		
+		.vvideo {
+			width: 100%; /* Ensures responsiveness */
+			max-width: 100%; /* Matches the maximum width of the container */
+			margin: 10px auto; /* Adds space around each player and centers them */
+			position: relative;
+			padding-top: 39.15%; /* Maintains aspect ratio (based on the embed's padding) */
+		}
+
+		.vvideo iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%; /* Full width of container */
+			height: 100%; /* Full height of container */
+			border: none; /* Removes the iframe border */
+		}
+
+		.title-section p.centered {
+			text-align: center; /* Centers only the paragraphs with this class */
+		}
+		
+		.title-section p {
+			max-width: 70%; /* Limits the width of the paragraphs */
+			margin: 10px auto; /* Centers the paragraphs within the section */
+			text-align: justify; /* Aligns text to both left and right edges */
+			line-height: 1.6; /* Improves readability with better line spacing */
+		}
+		
+		.header-text {
+		  font-family: "Bebas Neue", sans-serif;
+		  font-weight: bold;
+		  font-size: 24px;
+		  margin-left: 15px;
+		  color: #4caf50;
+		  letter-spacing: 2px;
+		}
+		
+		.typeform-section {
+			width: 100%; /* Full width of the page */
+			max-width: 1200px; /* Optional: Limit the section's maximum width */
+			height: 500px;
+			margin: 0 auto; /* Centers the section */
+			padding: 20px 0; /* Adds vertical padding */
+			text-align: center; /* Center-aligns any additional content */
+			position: relative; /* Required for iframe positioning */
+		}
+		
+		
+		.contact-section {
+			padding-top: 200px;
+			width: 100%; /* Full width of the section */
+			max-width: 800px; /* Optional: Limits the section width */
+			margin: 20px auto; /* Centers the section and adds vertical margin */
+			text-align: center; /* Centers the content within the section */
+			
+			padding: 20px; /* Adds padding for spacing */
+			border-radius: 10px; /* Optional: Rounded corners for better design */
+		}
+
+		.contact-section h2 {
+			font-size: 2rem; /* Title size */
+			margin-bottom: 10px; /* Space below the title */
+		}
+
+		.contact-section p {
+			padding-top: 5px;
+			font-size: 1.2rem; /* Paragraph text size */
+			margin: 10px 0; /* Space between paragraphs */
+		}
+
+		.contact-section a {
+			color: #1e90ff; /* Email link color */
+			text-decoration: none; /* Removes underline from the link */
+		}
+
+		.contact-section a:hover {
+			text-decoration: underline; /* Adds underline on hover for emphasis */
+		}
+		
+    </style>
+</head>
+
+<body>
+
+    <section class="title-section">
+        <h1 class="header-text">MATRIX 7</h1>
+        <p class="centered">Run fluid simulations without a PhD.</p>
+		<br/>
+		<p>Modeling and simulation are essential for buildling physical systems. Engineers need to quantify lift, drag, and  other forces in order to hit design targets.</p>
+		<br/>
+		<p>Current simulation tools require someone with a background in fluid dyanmics to operate them.</p>
+		<br/>
+		<p>Now, you no longer need a Phd in Fluid dynamics in order to run and get useful data out of CFD simulation.</p>
+		<p>LLMs can setup your simulation, explain what they did, and interpret the output for you.</p>
+    </section>
+
+	<section class="video-section">
+		<div class="video-container">
+			<iframe 
+				src="https://player.vimeo.com/video/1030840347?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+				title="matrix7 demo video">
+			</iframe>
+		</div>
+	</section>
+
+    <section class="three-video-section">
+		<h2>Also, an AI Fluid Simulation Solver</h2>
+		<ul>
+			<li>600+ step predictions from 1 initial frame</li>
+			<li>20x faster than current CFD solutions</li>
+		</ul>
+        <div class="videos-container">
+			
+			<div class="vvideo" style="padding:39.15% 0 0 0;position:relative;">
+				<iframe src="https://player.vimeo.com/video/1030185344?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="result15">
+				</iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+
+			<div class="vvideo" style="padding:39.15% 0 0 0;position:relative;">
+				<iframe src="https://player.vimeo.com/video/1030184355?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+						frameborder="0" 
+						allow="autoplay; 
+						fullscreen; 
+						picture-in-picture; 
+						clipboard-write" 
+						style="position:absolute;top:0;left:0;width:100%;height:100%;" title="result14">
+				</iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+			
+			<div style="padding:39.15% 0 0 0;position:relative;">
+				<iframe src="https://player.vimeo.com/video/1030185185?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="result2">
+				</iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+            
+			
+			<video controls style="display: none;">
+                <source src="D:\\ai_cfd_simulation\\rollouts\\v14\\rollout_v14_2250k_steps\\result_vtu\\airfoil_15.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+	
+	<section class="typeform-section">
+		<div data-tf-live="01JCS4EAWHQJZMYXWR6VE25KXD"></div>
+		<div style="width: 100%; max-width: 600px; margin: auto; position: relative; padding-top: 56.25%;">
+			<iframe
+				src="https://v8mzq6eagmp.typeform.com/to/IJyDphxe?disable-auto-focus=true"
+				frameborder="0"
+				style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+				allow="camera; microphone; autoplay; encrypted-media;"
+				title="Typeform Embed">
+			</iframe>
+		</div>
+		<script src="//embed.typeform.com/next/embed.js"></script>
+		
+	</section>
+
+	<section class="contact-section">
+		<h2>Contact Us</h2>
+		<p>If you have any questions or would like to learn more, feel free to reach out!</p>
+		<p>Email: <a href="mailto:bryan@matrixseven.ai">bryan@matrixseven.com</a></p>
+	</section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 0);
+        });
+    </script>
+
+</body>
+</html>
