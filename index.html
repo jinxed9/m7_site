@@ -42,7 +42,7 @@
 		.video-section .video-container {
 			position: relative;
 			height: 800px;
-			width: 80%; /* Set the width to 70% of the screen width */
+			width: 95%; /* Set the width to 70% of the screen width */
 			max-width: 800px; /* Ensures the video does not exceed 1000px */
 			padding-top: 10px; /* Aspect ratio for 1216:1310 videos */
 		}
@@ -71,12 +71,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            width: 95%;
+			max-width: 800px;
         }
 
 		.video-section video {
-			max-width: 70%;
-			width: 70%;
+			max-width: 95%;
+			width: 95%;
 			height: auto;
 			margin: 10px;
 		}	
@@ -94,12 +95,13 @@
 		.three-video-section .videos-container {
 			flex-direction: column;
 			align-items: center;
-			width: 70%;
+			max-width 800px;
+			width: 95%;
 		}
 
 		.three-video-section .videos-container video {
-			width: 70%;
-			max-width: 700px;
+			width: 95%;
+			max-width: 800px;
 		}
 		@media (max-width: 768px) {
             .title-section h1 {
@@ -209,9 +211,9 @@
 		<br/>
 		<p>Modeling and simulation are essential for buildling physical systems. Engineers need to quantify lift, drag, and  other forces in order to hit design targets.</p>
 		<br/>
-		<p>Current fluid simulation tools require someone with a background in fluid dyanmics to operate them.</p>
+		<p>Current fluid simulation tools are difficult to use.  You need background in fluid dyanmics to operate them.</p>
 		<br/>
-		<p>You no longer need a Phd in Fluid dynamics in order to run and get useful data out of CFD simulation.</p>
+		<p>With AI, you don't need Phd in fluid dynamics to get useful data out of CFD simulations.</p>
     </section>
 
 	<section class="video-section">
@@ -224,7 +226,7 @@
 	</section>
 
     <section class="three-video-section">
-		<h2>Also, a AI Fluid Simulation Solver</h2>
+		<h2>Also, an AI Fluid Simulation Solver</h2>
 		<ul>
 			<li>600+ step predictions from 1 initial frame</li>
 			<li>20x faster than current CFD solutions</li>
